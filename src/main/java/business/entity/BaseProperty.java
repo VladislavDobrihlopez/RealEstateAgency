@@ -1,21 +1,26 @@
 package business.entity;
 
+import com.google.gson.Gson;
+
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public abstract class BaseProperty {
-    private float price;
+public abstract class BaseProperty implements Serializable {
+    protected static Gson gson = new Gson();
 
-    private String address;
+    protected float price;
 
-    private Float square;
+    protected String address;
 
-    private int numberOfRooms;
+    protected Float square;
 
-    private int floor;
+    protected int numberOfRooms;
 
-    private int totalFloors;
+    protected int floor;
 
-    private LocalDateTime timeAdded;
+    protected int totalFloors;
+
+    protected LocalDateTime timeAdded;
 
     public BaseProperty(float price, String address, Float square, int numberOfRooms, int floor, int totalFloors, LocalDateTime timeAdded) {
         this.price = price;
@@ -81,5 +86,10 @@ public abstract class BaseProperty {
 
     public void setTimeAdded(LocalDateTime timeAdded) {
         this.timeAdded = timeAdded;
+    }
+
+    @Override
+    public String toString() {
+        return gson.toJson(this);
     }
 }

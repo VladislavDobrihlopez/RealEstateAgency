@@ -1,12 +1,13 @@
 package business.entity;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public abstract class LivingBaseProperty extends BaseProperty {
+public abstract class LivingPropertyBase extends BaseProperty implements Serializable {
     private String furnishing;
     private String metroStation;
 
-    public LivingBaseProperty(float price, String address, Float square, int numberOfRooms, int floor, int totalFloors, LocalDateTime timeAdded, String furnishing, String metroStation) {
+    public LivingPropertyBase(float price, String address, Float square, int numberOfRooms, int floor, int totalFloors, LocalDateTime timeAdded, String furnishing, String metroStation) {
         super(price, address, square, numberOfRooms, floor, totalFloors, timeAdded);
         this.furnishing = furnishing;
         this.metroStation = metroStation;
