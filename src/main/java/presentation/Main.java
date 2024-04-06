@@ -3,8 +3,8 @@ package presentation;
 import business.entity.BaseProperty;
 import business.entity.commercial.OfficeProperty;
 import business.entity.living.LivingPropertyForRentBase;
-import persistence.PropertiesDatabaseManagerImpl;
-import persistence.PropertyDatabaseManager;
+import persistence.local.PropertiesDatabaseManagerImpl;
+import persistence.local.PropertyDatabaseManager;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
