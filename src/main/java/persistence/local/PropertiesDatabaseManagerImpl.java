@@ -36,11 +36,11 @@ public class PropertiesDatabaseManagerImpl implements PropertyDatabaseManager {
                 properties.add(property);
             }
         } catch (EOFException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         } catch (ClassNotFoundException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         }
         return properties;
     }

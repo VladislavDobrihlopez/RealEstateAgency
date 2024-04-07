@@ -3,6 +3,7 @@ package business.entity;
 import com.google.gson.Gson;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public abstract class BaseProperty implements Serializable {
@@ -20,9 +21,9 @@ public abstract class BaseProperty implements Serializable {
 
     protected int totalFloors;
 
-    protected LocalDateTime timeAdded;
+    protected LocalDate timeAdded;
 
-    public BaseProperty(float price, String address, Float square, int numberOfRooms, int floor, int totalFloors, LocalDateTime timeAdded) {
+    public BaseProperty(float price, String address, Float square, int numberOfRooms, int floor, int totalFloors, LocalDate timeAdded) {
         this.price = price;
         this.address = address;
         this.square = square;
@@ -80,16 +81,16 @@ public abstract class BaseProperty implements Serializable {
         this.totalFloors = totalFloors;
     }
 
-    public LocalDateTime getTimeAdded() {
+    public LocalDate getTimeAdded() {
         return timeAdded;
     }
 
-    public void setTimeAdded(LocalDateTime timeAdded) {
+    public void setTimeAdded(LocalDate timeAdded) {
         this.timeAdded = timeAdded;
     }
 
     @Override
     public String toString() {
-        return gson.toJson(this);
+        return "{\"цена\":" + getPrice() + ", \"адрес\":\"" + getAddress() + "\", \"площадь\":" + getSquare() + ", \"количество комнат\":" + getNumberOfRooms() + ", \"этаж\":" + getFloor() + ", \"общее количество этажей\":" + getTotalFloors() + ", \"время добавления\":\"" + getTimeAdded() + "\"}";
     }
 }

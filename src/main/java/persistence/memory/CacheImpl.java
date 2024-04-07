@@ -16,15 +16,21 @@ import java.util.Map;
 public class CacheImpl {
     private final Map<String, List<BaseProperty>> cache = new HashMap<>();
 
+    public boolean isInitialized = false;
+
     public <T extends BaseProperty> void initialize(List<T> items) {
-        for (T item: items) {
-            upsert(item);
+        if (!isInitialized) {
+            for (T item : items) {
+                upsert(item);
+            }
+            isInitialized = true;
         }
     }
 
     public List<BaseProperty> extractAll() {
         List<BaseProperty> total = new ArrayList<>();
         for (Map.Entry<String, List<BaseProperty>> entry: cache.entrySet()) {
+            if (entry.getValue() == null) throw new IllegalStateException();
             total.addAll(entry.getValue());
         }
         return total;

@@ -3,6 +3,7 @@ package business.entity.living;
 import business.entity.LivingPropertyBase;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class LivingPropertyForRent extends LivingPropertyBase implements Serializable {
@@ -10,7 +11,7 @@ public class LivingPropertyForRent extends LivingPropertyBase implements Seriali
 
     private int prepaidMonths;
 
-    public LivingPropertyForRent(float price, String address, Float square, int numberOfRooms, int floor, int totalFloors, LocalDateTime timeAdded, String furnishing, String metroStation, String rentType, int prepaidMonths) {
+    public LivingPropertyForRent(float price, String address, Float square, int numberOfRooms, int floor, int totalFloors, LocalDate timeAdded, String furnishing, String metroStation, String rentType, int prepaidMonths) {
         super(price, address, square, numberOfRooms, floor, totalFloors, timeAdded, furnishing, metroStation);
         this.rentType = rentType;
         this.prepaidMonths = prepaidMonths;
@@ -34,6 +35,6 @@ public class LivingPropertyForRent extends LivingPropertyBase implements Seriali
 
     @Override
     public String toString() {
-        return gson.toJson(this);
+        return "{\"цена\":" + getPrice() + ", \"адрес\":\"" + getAddress() + "\", \"площадь\":" + getSquare() + ", \"количество комнат\":" + getNumberOfRooms() + ", \"этаж\":" + getFloor() + ", \"общее количество этажей\":" + getTotalFloors() + ", \"время добавления\":\"" + getTimeAdded() + "\", \"мебель\":\"" + getFurnishing() + "\", \"метро\":\"" + getMetroStation() + "\", \"тип аренды\":\"" + getRentType() + "\", \"предоплаченные месяцы\":" + getPrepaidMonths() + "}";
     }
 }

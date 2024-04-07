@@ -3,16 +3,26 @@ package presentation;
 import business.entity.BaseProperty;
 import business.entity.commercial.OfficeProperty;
 import business.entity.living.LivingPropertyForRent;
+import persistence.PropertyDataManager;
 import persistence.local.PropertiesDatabaseManagerImpl;
 import persistence.local.PropertyDatabaseManager;
+import persistence.memory.CacheImpl;
+import presentation.menu.MainMenu;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+//        test();
+        CacheImpl cache = new CacheImpl();
+        PropertyDataManager manager = new PropertyDataManager(new PropertiesDatabaseManagerImpl(), cache);
+            new MainMenu(manager).create();
+    }
+
+    private static void test() {
         PropertyDatabaseManager manager = new PropertiesDatabaseManagerImpl();
         Collection<BaseProperty> properties = new ArrayList<>();
         properties.add(new OfficeProperty(
@@ -22,7 +32,7 @@ public class Main {
                 5,                      // numberOfRooms
                 3,                      // floor
                 10,                     // totalFloors
-                LocalDateTime.now(),   // timeAdded
+                LocalDate.now(),   // timeAdded
                 "High-speed internet, Parking" // amenities
         ));
         properties.add(new LivingPropertyForRent(
@@ -32,7 +42,7 @@ public class Main {
                 3,                      // numberOfRooms
                 2,                      // floor
                 5,                      // totalFloors
-                LocalDateTime.now(),   // timeAdded
+                LocalDate.now(),   // timeAdded
                 "Furnished",            // furnishing
                 "Central Station",      // metroStation
                 "Monthly",              // rentType

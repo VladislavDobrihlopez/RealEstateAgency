@@ -2,6 +2,7 @@ package business;
 
 import business.entity.BaseProperty;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
@@ -17,9 +18,9 @@ public class PropertySearchEngine {
     private Integer numberOfRooms = null;
     private Integer floor = null;
     private Integer totalFloors = null;
-    private LocalDateTime timeAdded = null;
+    private LocalDate timeAdded = null;
 
-    public List<BaseProperty> search(Collection<BaseProperty> items) {
+    public <T extends BaseProperty> List<T> search(Collection<T> items) {
         return items.stream().filter(baseProperty -> {
             boolean shouldTake = true;
             if (timeAdded != null && !(baseProperty.getTimeAdded().isAfter(timeAdded))) shouldTake = false;
@@ -35,9 +36,16 @@ public class PropertySearchEngine {
     }
 
     public static class SearchEngineBuilder {
+        private SearchEngineBuilder() {}
         private PropertySearchEngine instance;
 
-        public SearchEngineBuilder buildSearch() {
+        public static SearchEngineBuilder buildSearch() {
+            SearchEngineBuilder builder = new SearchEngineBuilder();
+            builder.instance = new PropertySearchEngine();
+            return builder;
+        }
+
+        public SearchEngineBuilder reset() {
             instance = new PropertySearchEngine();
             return this;
         }
@@ -68,7 +76,7 @@ public class PropertySearchEngine {
             return this;
         }
 
-        public SearchEngineBuilder takeFrom(LocalDateTime startTime) {
+        public SearchEngineBuilder takeFrom(LocalDate startTime) {
             instance.timeAdded = startTime;
             return this;
         }
