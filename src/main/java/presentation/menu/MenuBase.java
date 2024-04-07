@@ -3,6 +3,7 @@ package presentation.menu;
 import presentation.UiBase;
 
 public abstract class MenuBase extends UiBase {
+
     protected static final String ACTION_CHOOSE_OPTION = "Select any option %d - %d";
     protected final String[] OPTIONS;
     protected Runnable[] onOptionCallbacks;

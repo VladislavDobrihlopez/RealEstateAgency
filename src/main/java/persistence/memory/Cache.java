@@ -1,4 +1,16 @@
 package persistence.memory;
 
-public interface Cache {
+import java.util.List;
+
+public interface Cache<T> {
+
+    public void initialize(List<T> items);
+
+    public List<T> extractAll();
+
+    public void clear();
+
+    public void upsert(T item);
+
+    public void remove(T item);
 }

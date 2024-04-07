@@ -2,7 +2,6 @@ package business.entity;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public abstract class LivingPropertyBase extends BaseProperty implements Serializable {
     private String furnishing;

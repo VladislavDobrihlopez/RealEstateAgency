@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.List;
 
 public class PropertiesDatabaseManagerImpl implements PropertyDatabaseManager {
+
     private static final String directoryPath = "cache/";
     private static final String databasePath = directoryPath + "real_estate_agency_db.txt";
     private static final File pathFile = new File(directoryPath);

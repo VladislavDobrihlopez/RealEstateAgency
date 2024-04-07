@@ -4,6 +4,7 @@ package presentation.menu;
 import persistence.PropertyDataManager;
 
 public class MainMenu extends MenuBase {
+
     private static final String HEADER_TITLE = "Добро пожаловать в агентство недвижимости!";
     private static final String CREDENTIALS = "Разработано Войтовым Владиславом, dobrihlopez@gmail.com";
 

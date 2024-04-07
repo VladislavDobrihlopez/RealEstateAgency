@@ -4,11 +4,10 @@ import business.entity.LivingPropertyBase;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class LivingPropertyForRent extends LivingPropertyBase implements Serializable {
-    private String rentType;
 
+    private String rentType;
     private int prepaidMonths;
 
     public LivingPropertyForRent(float price, String address, Float square, int numberOfRooms, int floor, int totalFloors, LocalDate timeAdded, String furnishing, String metroStation, String rentType, int prepaidMonths) {

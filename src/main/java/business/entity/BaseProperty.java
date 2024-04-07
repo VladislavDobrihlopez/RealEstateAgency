@@ -4,9 +4,9 @@ import com.google.gson.Gson;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public abstract class BaseProperty implements Serializable {
+
     protected static Gson gson = new Gson();
 
     protected float price;

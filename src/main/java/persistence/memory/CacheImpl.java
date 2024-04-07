@@ -13,14 +13,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CacheImpl {
+public class CacheImpl implements Cache<BaseProperty> {
+
     private final Map<String, List<BaseProperty>> cache = new HashMap<>();
 
     public boolean isInitialized = false;
 
-    public <T extends BaseProperty> void initialize(List<T> items) {
+    public void initialize(List<BaseProperty> items) {
         if (!isInitialized) {
-            for (T item : items) {
+            for (BaseProperty item : items) {
                 upsert(item);
             }
             isInitialized = true;

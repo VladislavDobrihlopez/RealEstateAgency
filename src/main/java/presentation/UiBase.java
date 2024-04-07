@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public abstract class UiBase {
+
     protected static final String INPUT = "Input %s";
     protected static final String TRY_AGAIN = "Введено некорректное значение. Попробуйте снова";
 
@@ -35,7 +36,7 @@ public abstract class UiBase {
         System.out.println(output);
         while (true) {
             try {
-                return Integer.parseInt(inputSteam.next());
+                return Integer.parseInt(inputSteam.nextLine());
             } catch (Exception e) {
                 System.out.println(error);
             }
@@ -50,7 +51,7 @@ public abstract class UiBase {
         System.out.println(output);
         while (true) {
             try {
-                return Float.parseFloat(inputSteam.next());
+                return Float.parseFloat(inputSteam.nextLine());
             } catch (Exception e) {
                 System.out.println(error);
             }

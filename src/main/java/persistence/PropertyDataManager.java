@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class PropertyDataManager {
+
     private final PropertyDatabaseManager databaseManager;
     private final CacheImpl cache;
 

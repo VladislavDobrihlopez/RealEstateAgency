@@ -3,6 +3,7 @@ package presentation.menu;
 import persistence.PropertyDataManager;
 
 public class ViewerMenu extends MenuBase {
+
     private static final String HEADER_TITLE = "Раздел работы с недвижимостью";
 
     public ViewerMenu(PropertyDataManager manager) {

@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PropertySearchMenu extends MenuBase {
+
     private final PropertyDataManager manager;
     private final PropertySearchEngine.SearchEngineBuilder searchEngineBuilder;
     private PropertySorter.SortStrategy strategy = null;
@@ -102,7 +103,7 @@ public class PropertySearchMenu extends MenuBase {
                 break;
             case 3:
                 float minPrice = getFloatInput("Введите мин стоимость:");
-                float maxPrice = getFloatInput("Введите мин стоимость:");
+                float maxPrice = getFloatInput("Введите макс стоимость:");
                 if (minPrice > maxPrice) {
                     System.out.println("Ошибка. Минимальная стоимость не может быть выше максимальной");
                 } else {

@@ -4,7 +4,6 @@ import business.entity.LivingPropertyBase;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class LivingPropertyForSale extends LivingPropertyBase implements Serializable {
 

@@ -4,7 +4,6 @@ import business.entity.CommercialPropertyBase;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class WarehouseProperty extends CommercialPropertyBase implements Serializable {
 

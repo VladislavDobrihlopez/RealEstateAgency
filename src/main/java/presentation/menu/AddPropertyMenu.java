@@ -9,6 +9,7 @@ import persistence.PropertyDataManager;
 import java.time.LocalDate;
 
 public class AddPropertyMenu extends MenuBase {
+
     private static final String HEADER_TITLE = "Раздел добавления недвижимости";
 
     private final PropertyDataManager dataManager;
@@ -110,4 +111,3 @@ public class AddPropertyMenu extends MenuBase {
         System.out.println("Жилая недвижимость для продажи добавлена успешно.");
     }
 }
-

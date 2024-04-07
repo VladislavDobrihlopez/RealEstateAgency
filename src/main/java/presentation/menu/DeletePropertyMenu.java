@@ -6,6 +6,7 @@ import persistence.PropertyDataManager;
 import java.util.List;
 
 public class DeletePropertyMenu extends MenuBase {
+
     private static final String HEADER_TITLE = "Раздел удаления недвижимости";
 
     private final PropertyDataManager dataManager;
