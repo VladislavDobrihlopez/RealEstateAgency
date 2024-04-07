@@ -37,9 +37,6 @@ public class PropertySearchEngine {
     public static class SearchEngineBuilder {
         private PropertySearchEngine instance;
 
-        private SearchEngineBuilder() {
-        }
-
         public SearchEngineBuilder buildSearch() {
             instance = new PropertySearchEngine();
             return this;

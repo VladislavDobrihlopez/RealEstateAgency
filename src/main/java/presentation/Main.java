@@ -2,7 +2,7 @@ package presentation;
 
 import business.entity.BaseProperty;
 import business.entity.commercial.OfficeProperty;
-import business.entity.living.LivingPropertyForRentBase;
+import business.entity.living.LivingPropertyForRent;
 import persistence.local.PropertiesDatabaseManagerImpl;
 import persistence.local.PropertyDatabaseManager;
 
@@ -25,7 +25,7 @@ public class Main {
                 LocalDateTime.now(),   // timeAdded
                 "High-speed internet, Parking" // amenities
         ));
-        properties.add(new LivingPropertyForRentBase(
+        properties.add(new LivingPropertyForRent(
                 1500.0f,                // price
                 "123 Main St",          // address
                 100.0f,                 // square

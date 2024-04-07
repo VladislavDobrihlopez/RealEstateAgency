@@ -5,9 +5,9 @@ import business.entity.LivingPropertyBase;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class LivingPropertyForSaleBase extends LivingPropertyBase implements Serializable {
+public class LivingPropertyForSale extends LivingPropertyBase implements Serializable {
 
-    public LivingPropertyForSaleBase(float price, String address, Float square, int numberOfRooms, int floor, int totalFloors, LocalDateTime timeAdded, String furnishing, String metroStation) {
+    public LivingPropertyForSale(float price, String address, Float square, int numberOfRooms, int floor, int totalFloors, LocalDateTime timeAdded, String furnishing, String metroStation) {
         super(price, address, square, numberOfRooms, floor, totalFloors, timeAdded, furnishing, metroStation);
     }
 
