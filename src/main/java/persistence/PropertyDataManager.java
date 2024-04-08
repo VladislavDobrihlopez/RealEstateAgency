@@ -2,7 +2,7 @@ package persistence;
 
 import business.entity.BaseProperty;
 import persistence.local.PropertyDatabaseManager;
-import persistence.memory.CacheImpl;
+import persistence.memory.Cache;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +11,9 @@ import java.util.stream.Collectors;
 public class PropertyDataManager {
 
     private final PropertyDatabaseManager databaseManager;
-    private final CacheImpl cache;
+    private final Cache<BaseProperty> cache;
 
-    public PropertyDataManager(PropertyDatabaseManager databaseManager, CacheImpl cache) {
+    public PropertyDataManager(PropertyDatabaseManager databaseManager, Cache<BaseProperty>  cache) {
         this.databaseManager = databaseManager;
         this.cache = cache;
     }
@@ -50,7 +50,7 @@ public class PropertyDataManager {
 
     private List<BaseProperty> provideData() {
         List<BaseProperty> items;
-        if (cache.isInitialized) {
+        if (cache.isInitialized()) {
             items = cache.extractAll();
         } else {
             items = databaseManager.getAll();

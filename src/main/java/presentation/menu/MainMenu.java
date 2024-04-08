@@ -10,7 +10,7 @@ public class MainMenu extends MenuBase {
 
     public MainMenu(PropertyDataManager manager) {
         super(
-                new String[]{"Просмотреть недвижимость", "Сохранить"},
+                new String[]{"Перейти в раздел работы с недвижимостью", "Сохранить"},
                 new Runnable[]{() -> new ViewerMenu(manager).create(), manager::saveAllIntoDb}
         );
     }

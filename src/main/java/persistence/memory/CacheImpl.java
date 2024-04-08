@@ -19,6 +19,10 @@ public class CacheImpl implements Cache<BaseProperty> {
 
     public boolean isInitialized = false;
 
+    public boolean isInitialized() {
+        return isInitialized;
+    }
+
     public void initialize(List<BaseProperty> items) {
         if (!isInitialized) {
             for (BaseProperty item : items) {

@@ -3,6 +3,7 @@ package persistence.memory;
 import java.util.List;
 
 public interface Cache<T> {
+    public boolean isInitialized();
 
     public void initialize(List<T> items);
 

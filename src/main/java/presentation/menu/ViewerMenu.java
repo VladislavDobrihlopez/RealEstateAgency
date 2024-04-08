@@ -8,7 +8,7 @@ public class ViewerMenu extends MenuBase {
 
     public ViewerMenu(PropertyDataManager manager) {
         super(new String[]{
-                "Поиск недвижимости",
+                "Найти недвижимость",
                 "Добавить недвижимость",
                 "Удалить недвижимость",
                 "Вернуться назад",
