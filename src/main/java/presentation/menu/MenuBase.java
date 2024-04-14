@@ -4,7 +4,7 @@ import presentation.UiBase;
 
 public abstract class MenuBase extends UiBase {
 
-    protected static final String ACTION_CHOOSE_OPTION = "Select any option %d - %d";
+    protected static final String ACTION_CHOOSE_OPTION = "Выберите опцию %d - %d";
     protected final String[] OPTIONS;
     protected Runnable[] onOptionCallbacks;
     protected boolean isAlive;

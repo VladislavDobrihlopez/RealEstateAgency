@@ -5,13 +5,9 @@ import java.util.Scanner;
 
 public abstract class UiBase {
 
-    protected static final String INPUT = "Input %s";
     protected static final String TRY_AGAIN = "Введено некорректное значение. Попробуйте снова";
 
     private static final Scanner inputSteam = new Scanner(System.in);
-
-    public final void clear() {
-    }
 
     protected void list(Object[] items) {
         if (items.length == 0) return;

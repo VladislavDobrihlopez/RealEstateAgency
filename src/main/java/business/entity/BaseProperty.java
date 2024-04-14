@@ -13,7 +13,7 @@ public abstract class BaseProperty implements Serializable {
 
     protected String address;
 
-    protected Float square;
+    protected float square;
 
     protected int numberOfRooms;
 

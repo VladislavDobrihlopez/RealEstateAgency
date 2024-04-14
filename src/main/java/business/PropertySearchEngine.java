@@ -23,7 +23,7 @@ public class PropertySearchEngine {
     public <T extends BaseProperty> List<T> search(Collection<T> items) {
         return items.stream().filter(baseProperty -> {
             boolean shouldTake = true;
-            if (timeAdded != null && !(baseProperty.getTimeAdded().isAfter(timeAdded))) shouldTake = false;
+            if (timeAdded != null && (baseProperty.getTimeAdded().isBefore(timeAdded))) shouldTake = false;
             if (minPrice != null && (baseProperty.getPrice() < minPrice || baseProperty.getPrice() > maxPrice))
                 shouldTake = false;
             if (numberOfRooms != null && baseProperty.getNumberOfRooms() != numberOfRooms) shouldTake = false;
