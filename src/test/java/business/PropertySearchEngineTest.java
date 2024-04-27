@@ -91,9 +91,15 @@ class PropertySearchEngineTest {
         LocalDate yesterday = today.minusDays(1);
         LocalDate twoDaysAgo = today.minusDays(2);
 
-        BaseProperty property1 = new MockProperty(100000, "123 Main St", 100.0f, 3, 2, 5, today);
-        BaseProperty property2 = new MockProperty(150000, "456 Elm St", 120.0f, 4, 3, 6, yesterday);
-        BaseProperty property3 = new MockProperty(200000, "789 Oak St", 150.0f, 5, 4, 7, twoDaysAgo);
+        BaseProperty property1 = new MockProperty(100000, "123 Main St",
+                100.0f, 3,
+                2, 5, today);
+        BaseProperty property2 = new MockProperty(150000, "456 Elm St",
+                120.0f, 4,
+                3, 6, yesterday);
+        BaseProperty property3 = new MockProperty(200000, "789 Oak St",
+                150.0f, 5,
+                4, 7, twoDaysAgo);
 
         properties.clear();
         properties.add(property1);
