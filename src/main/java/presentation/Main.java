@@ -16,10 +16,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//        test();
         CacheImpl cache = new CacheImpl();
         PropertyDataManager manager = new PropertyDataManager(new PropertiesDatabaseManagerImpl(), cache);
-            new MainMenu(manager).create();
+        new MainMenu(manager).create();
     }
 
     private static void test() {

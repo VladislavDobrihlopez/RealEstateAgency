@@ -7,8 +7,6 @@ import java.time.LocalDate;
 
 public abstract class BaseProperty implements Serializable {
 
-    protected static Gson gson = new Gson();
-
     protected float price;
 
     protected String address;

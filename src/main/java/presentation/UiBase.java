@@ -25,7 +25,7 @@ public abstract class UiBase {
 
     protected String getStringInput(String output) {
         System.out.println(output);
-        return inputSteam.next();
+        return inputSteam.nextLine();
     }
 
     protected int getIntInput(String output, String error) {
